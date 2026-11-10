@@ -54,9 +54,9 @@
       },
       "icon": "icon.svg",
       "author": "dsh-usage-report contributors",
-      "homepage": "https://github.com/OWNER/dsh-usage-report",
+      "homepage": "https://github.com/yuyaxiong/dsh-usage-report",
       "repository": {
-        "url": "https://github.com/OWNER/dsh-usage-report"
+        "url": "https://github.com/yuyaxiong/dsh-usage-report"
       },
       "metadata": {
         "category": "observability",
@@ -79,11 +79,11 @@
       "versions": [
         {
           "version": "0.1.0",
-          "publishTimestamp": 1794303150,
+          "publishTimestamp": 1794304047,
           "source": {
             "type": "git",
-            "url": "https://github.com/OWNER/dsh-usage-report",
-            "commit": "e209b3a81c60398d8ef9552516bc5d0969994705"
+            "url": "https://github.com/yuyaxiong/dsh-usage-report",
+            "commit": "72bd08a0c07816251ca526d34cea59c537350276"
           },
           "engines": {
             "dsh": "^0.2.2-rc.1"
