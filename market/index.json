@@ -79,11 +79,11 @@
       "versions": [
         {
           "version": "0.1.0",
-          "publishTimestamp": 1794304047,
+          "publishTimestamp": 1794304055,
           "source": {
             "type": "git",
             "url": "https://github.com/yuyaxiong/dsh-usage-report",
-            "commit": "72bd08a0c07816251ca526d34cea59c537350276"
+            "commit": "fe29eacbc8001eb00542c9a4c1570aea46762978"
           },
           "engines": {
             "dsh": "^0.2.2-rc.1"

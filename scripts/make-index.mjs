@@ -14,7 +14,7 @@
  * 索引里每个版本都钉死 commit：git 来源不允许分支或 tag，必须是 40 位 SHA。
  */
 import { execFileSync } from "node:child_process";
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, copyFileSync } from "node:fs";
 import { dirname } from "node:path";
 
 const args = process.argv.slice(2);
@@ -86,6 +86,8 @@ const doc = {
 };
 
 mkdirSync(dirname(out), { recursive: true });
+// 图标和索引同目录：相对 icon 才能在 Pages / jsDelivr 下都解析得到
+try { copyFileSync("icon.svg", `${dirname(out)}/icon.svg`); } catch {}
 writeFileSync(out, `${JSON.stringify(doc, null, 2)}\n`);
 console.log(`写入 ${out}`);
 console.log(`  ${pkg.name}@${version} → git ${repo}@${commit.slice(0, 12)}… · engines=${JSON.stringify(doc.plugins[0].versions[0].engines)}`);
