@@ -1,5 +1,5 @@
-# 把 market/ 发布到 GitHub Pages，索引地址就是
-#   https://<owner>.github.io/<repo>/index.json
+# 每次推送 main：按当前提交重新生成索引 → 发布 market/ 到 GitHub Pages
+# 索引地址：https://<owner>.github.io/<repo>/index.json
 name: publish-index
 
 on:
@@ -24,6 +24,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: 生成索引（钉住当前提交）
+        run: node scripts/make-index.mjs --repo "${{ github.server_url }}/${{ github.repository }}"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

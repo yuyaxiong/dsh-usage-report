@@ -1,0 +1,95 @@
+{
+  "format": 1,
+  "title": {
+    "en": "dsh-usage-report",
+    "zh": "DSH 用量账本"
+  },
+  "description": {
+    "en": "Global token usage and cost dashboard for DeepSeek Harness, as a DSH bundle.",
+    "zh": "把所有会话日志聚合成用量与费用看板：按小时/按天的图表、按模型分栏、自定义区间与 CSV 导出。"
+  },
+  "metadata": {
+    "categories": {
+      "observability": {
+        "title": {
+          "en": "Observability",
+          "zh": "可观测"
+        }
+      }
+    },
+    "labels": {
+      "bundle": {
+        "title": {
+          "en": "Bundle",
+          "zh": "组合包"
+        }
+      },
+      "local-only": {
+        "title": {
+          "en": "Local only",
+          "zh": "纯本地"
+        }
+      }
+    },
+    "sortKeys": {
+      "downloads": {
+        "title": {
+          "en": "Downloads",
+          "zh": "下载量"
+        },
+        "order": "desc"
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-usage-report",
+      "title": {
+        "en": "Usage and cost",
+        "zh": "用量与费用"
+      },
+      "description": {
+        "en": "Aggregates every session log into a usage and cost dashboard with hourly/daily charts, per-model panels, a date range picker and CSV export.",
+        "zh": "把所有会话日志聚合成用量与费用看板：按小时/按天的图表、按模型分栏、自定义区间与 CSV 导出。"
+      },
+      "icon": "icon.svg",
+      "author": "dsh-usage-report contributors",
+      "homepage": "https://github.com/OWNER/dsh-usage-report",
+      "repository": {
+        "url": "https://github.com/OWNER/dsh-usage-report"
+      },
+      "metadata": {
+        "category": "observability",
+        "keywords": [
+          "usage",
+          "tokens",
+          "cost",
+          "dashboard",
+          "用量",
+          "费用"
+        ],
+        "labels": [
+          "bundle",
+          "local-only"
+        ],
+        "sortKeys": {
+          "downloads": 0
+        }
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1794303150,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/OWNER/dsh-usage-report",
+            "commit": "e209b3a81c60398d8ef9552516bc5d0969994705"
+          },
+          "engines": {
+            "dsh": "^0.2.2-rc.1"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -3,7 +3,7 @@
  * 从当前 git 提交生成 DSH 插件市场索引（format 1）。
  *
  * 用法：
- *   node scripts/make-index.mjs --repo https://github.com/OWNER/dsh-usage-report
+ *   node scripts/make-index.mjs --repo https://github.com/yuyaxiong/dsh-usage-report
  *
  * 可选：
  *   --version 0.1.0     包版本（默认取 package.json 的 version）

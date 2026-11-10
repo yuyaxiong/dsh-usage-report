@@ -28,9 +28,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OWNER/dsh-usage-report.git"
+    "url": "git+https://github.com/yuyaxiong/dsh-usage-report.git"
   },
-  "homepage": "https://github.com/OWNER/dsh-usage-report",
+  "homepage": "https://github.com/yuyaxiong/dsh-usage-report",
   "engines": {
     "dsh": "^0.2.2-rc.1"
   },
@@ -48,6 +48,6 @@
     }
   },
   "scripts": {
-    "index": "node scripts/make-index.mjs --repo https://github.com/OWNER/dsh-usage-report"
+    "index": "node scripts/make-index.mjs --repo https://github.com/yuyaxiong/dsh-usage-report"
   }
 }
