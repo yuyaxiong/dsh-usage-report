@@ -1,0 +1,39 @@
+# 打 tag（v0.2.1 这种）自动发到 npm。
+# 前提：仓库 Settings → Secrets and variables → Actions 里填 NPM_TOKEN。
+# token 必须是 granular access token，勾了 Bypass two-factor authentication，
+# 权限 Read and write (publish and stage)，scope 含 @yuyaxiong。
+name: publish-npm
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          registry-url: https://registry.npmjs.org
+
+      - name: 校验 tag 与 package.json 版本一致
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          TAG="${GITHUB_REF_NAME#v}"
+          PKG="$(node -p "require('./package.json').version")"
+          if [ "$TAG" != "$PKG" ]; then
+            echo "tag v$TAG 与 package.json 的 $PKG 不一致，先改版本号再打 tag"
+            exit 1
+          fi
+
+      - name: 发布
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

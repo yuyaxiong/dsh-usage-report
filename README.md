@@ -58,6 +58,22 @@ Then list the package in `dsh.profile.bundles` of your profile's `package.json`
 
 Restart the host after install. The usage page appears under **Settings → Usage**.
 
+## Release
+
+```bash
+npm version patch --no-git-tag-version   # patch / minor / major
+git commit -am "0.2.1"
+git tag v0.2.1
+git push && git push --tags
+```
+
+The tag push runs `.github/workflows/publish.yml`, which checks the tag against
+`package.json` and publishes to npm. It needs a repository secret `NPM_TOKEN`:
+a granular access token with **Bypass two-factor authentication**, `Read and write
+(publish and stage)`, scoped to `@yuyaxiong`.
+
+Manual publishing still works: `./scripts/publish.sh`.
+
 ## Pricing
 
 Costs are estimated, not billed. The built-in table follows
