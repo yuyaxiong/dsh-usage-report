@@ -1,0 +1,4 @@
+# 复制成 .npmrc（已被 .gitignore 忽略）后填入你的 token。
+# 只对 @yuyaxiong scope 指定 registry，其余包继续走 ~/.npmrc 里的镜像。
+@yuyaxiong:registry=https://registry.npmjs.org/
+//registry.npmjs.org/:_authToken=npm_REPLACE_ME
