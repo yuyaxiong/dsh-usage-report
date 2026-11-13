@@ -1,7 +1,7 @@
 {
-  "name": "dsh-usage-report",
-  "version": "0.1.0",
-  "description": "Global token usage and cost dashboard for DeepSeek Harness, as a DSH bundle.",
+  "name": "@yuyaxiong/dsh-usage-report",
+  "version": "0.2.0",
+  "description": "Token usage and cost dashboard for DeepSeek Harness: charts by hour and day, per-model panels, and a per-purpose split that separates conversation from auto review.",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -22,9 +22,11 @@
     "usage",
     "tokens",
     "cost",
-    "dashboard"
+    "dashboard",
+    "auto-review",
+    "purpose"
   ],
-  "author": "dsh-usage-report contributors",
+  "author": "yuyaxiong",
   "license": "MIT",
   "repository": {
     "type": "git",

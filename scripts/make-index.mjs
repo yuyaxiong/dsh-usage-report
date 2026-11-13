@@ -45,7 +45,7 @@ const doc = {
   title: { en: pkg.name, zh: "DSH 用量账本" },
   description: {
     en: pkg.description,
-    zh: "把所有会话日志聚合成用量与费用看板：按小时/按天的图表、按模型分栏、自定义区间与 CSV 导出。",
+    zh: "用量与费用看板，按模型和按用途拆分：把自动审查、标题、压缩的消耗从对话里分出来，配合按小时/按天图表与自定义区间。",
   },
   metadata: {
     categories: { observability: { title: { en: "Observability", zh: "可观测" } } },
@@ -60,8 +60,8 @@ const doc = {
       name: pkg.name,
       title: { en: "Usage and cost", zh: "用量与费用" },
       description: {
-        en: "Aggregates every session log into a usage and cost dashboard with hourly/daily charts, per-model panels, a date range picker and CSV export.",
-        zh: "把所有会话日志聚合成用量与费用看板：按小时/按天的图表、按模型分栏、自定义区间与 CSV 导出。",
+        en: "A usage and cost dashboard with a per-purpose split: separate auto-review, title and compaction spend from conversation cost, next to hourly/daily charts, per-model panels and CSV export.",
+        zh: "用量与费用看板，支持按用途拆分：把自动审查、会话标题、上下文压缩的消耗从对话成本里分出来，另有按小时/按天图表、按模型分栏与 CSV 导出。",
       },
       icon: "icon.svg",
       author: pkg.author,
@@ -69,7 +69,7 @@ const doc = {
       repository: { url: repo },
       metadata: {
         category: "observability",
-        keywords: ["usage", "tokens", "cost", "dashboard", "用量", "费用"],
+        keywords: ["usage", "tokens", "cost", "dashboard", "auto-review", "用量", "费用", "审查"],
         labels: ["bundle", "local-only"],
         sortKeys: { downloads: 0 },
       },

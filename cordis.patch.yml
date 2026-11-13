@@ -1,3 +1,6 @@
+# usage-report bundle patch: mounts the dashboard row when this package is listed
+# in a profile's dsh.profile.bundles. Applied after dsh-base and dsh-web-app,
+# before the user's own cordis.patch.yml.
 - insert:
     - id: dsh-usage
-      name: dsh-usage-report
+      name: '@yuyaxiong/dsh-usage-report'
