@@ -1,6 +1,6 @@
 {
   "name": "@yuyaxiong/dsh-usage-report",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Token usage and cost dashboard for DeepSeek Harness: charts by hour and day, per-model panels, and a per-purpose split that separates conversation from auto review.",
   "type": "module",
   "main": "lib/index.js",
